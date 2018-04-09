@@ -17,6 +17,17 @@ def start_of_word (letter, n)
 end
 
 def first_word (phrase)
-  phrase.split(" ")
-  return phrase[" "]
+  a = phrase.split(" ")
+  return a[0]
+end
+
+def titleize (title)
+  a = title.split(" ")
+  b = a.map {|x|
+    if x.length <= 3
+      return x
+    else x.capitalize!
+    end}
+  c = b.join(" ")
+  return "#{c}"
 end
